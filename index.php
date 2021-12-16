@@ -7,7 +7,7 @@ include_once 'controllers/loginUsers.php';
     <body>
     <div class="container bodyPage" id="loginContainer">
         <div class="title">
-            <h1>Poketok</h1>
+            <h1>Ai Card</h1>
         </div>
         <div class="row">
             <div class="col-12 text-center">

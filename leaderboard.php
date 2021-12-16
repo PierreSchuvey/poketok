@@ -15,7 +15,7 @@ if (isset($_SESSION['connected']) && isset($_SESSION['id']) && $_SESSION['connec
                 <th scope="col">#</th>
                 <th scope="col">Pseudo</th>
                 <th scope="col">TikTok</th>
-                <th scope="col"># Pokemons capturés</th>
+                <th scope="col">Cartes Possédées</th>
                 <th scope="col">Voir le profil</th>
             </tr>
             </thead>
