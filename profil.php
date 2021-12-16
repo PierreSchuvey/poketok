@@ -9,7 +9,7 @@ include_once 'controllers/addCard.php';
 if (isset($_SESSION['connected']) && isset($_SESSION['id']) && $_SESSION['connected'] == 1) {
   if($_SESSION['role'] == "Admin"){
   ?>
-    <form enctype="multipart/form-data" style="text-align:center;margin-top:20px" class="" action="/controllers/addCard.php" method="post">
+    <form enctype="multipart/form-data" style="text-align:center;margin-top:20px" class="" action="controllers/addCard.php" method="post">
       <input type="text" name="cardPath" value="">
       <input type="text" name="cardName" value="">
       <input type="text" name="cardNumber" value="">
