@@ -7,7 +7,7 @@ include_once 'controllers/profilController.php';
 if (isset($_SESSION['connected']) && isset($_SESSION['id']) && $_SESSION['connected'] == 1) {
   if($_SESSION['role'] == "Admin"){
   ?>
-    <form class="" action="/" method="post">
+    <form style="text-align:center;margin-top:20px" class="" action="/" method="post">
       <input type="file" name="giveCard" value="">
       <input type="submit" name="" value="Valider">
     </form>
