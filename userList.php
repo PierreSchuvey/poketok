@@ -1,9 +1,9 @@
 <?php
 include_once 'vues/header.php';
 include_once 'models/dataBase.php';
-include_once 'models/capture.php';
-include_once 'controllers/leaderBoardController.php';
-if (isset($_SESSION['connected']) && isset($_SESSION['id']) && $_SESSION['connected'] == 1) {
+include_once 'models/user.php';
+include_once 'controllers/userListController.php';
+if (isset($_SESSION['connected']) && isset($_SESSION['id']) && $_SESSION['connected'] == 1 && $_SESSION['role'] == "Admin") {
     ?>
     <div class="title">
         <h1>Leaderboard</h1>
@@ -12,39 +12,20 @@ if (isset($_SESSION['connected']) && isset($_SESSION['id']) && $_SESSION['connec
         <table class="table">
             <thead>
             <tr>
-                <th scope="col">#</th>
                 <th scope="col">Pseudo</th>
-                <th scope="col">TikTok</th>
-                <th scope="col">Cartes Possédées</th>
                 <th scope="col">Voir le profil</th>
             </tr>
             </thead>
             <tbody>
             <?php
-            $classement = 1;
-            foreach($leaderboard as $l){
-              if($l['id'] == $_SESSION['id']){
+            foreach($userList as $u){
                 ?>
                 <tr style="background-color:orange;color:black">
-                    <td><?=$classement?></td>
-                    <td><?=$l['player']?></td>
+                    <td><?=$l['pseudo']?></td>
                     <td><?=$l['tiktok']?></td>
-                    <td><?=$l['nbCapture']?></td>
                     <td><a style="color:black" id="profilLeaderBoard" href="/Profil_<?=$l['id']?>">Profil</a></td>
                 </tr>
                 <?php
-              }else{
-                ?>
-                <tr>
-                    <td><?=$classement?></td>
-                    <td><?=$l['player']?></td>
-                    <td><?=$l['tiktok']?></td>
-                    <td><?=$l['nbCapture']?></td>
-                    <td><a id="profilLeaderBoard" href="/Profil_<?=$l['id']?>">Profil</a></td>
-                </tr>
-                <?php
-              }
-                $classement ++;
             }
             ?>
             </tbody>

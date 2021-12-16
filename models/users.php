@@ -16,7 +16,7 @@ class users extends dataBase {
      */
 
     public function loginIn() {
-        $userLog = $this->db->prepare('SELECT `id`,`pseudo`, `password` FROM `users` WHERE `pseudo` = :pseudo');
+        $userLog = $this->db->prepare('SELECT `id`,`pseudo`, `password`, `role` FROM `users` WHERE `pseudo` = :pseudo');
         $userLog->bindValue(':pseudo', $this->pseudo, PDO::PARAM_STR);
         $userLog->execute();
         return $userLog = $userLog->fetch(PDO::FETCH_OBJ);

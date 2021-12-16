@@ -42,6 +42,7 @@ if (isset($_POST['logInSubmit'])) {
                 $_SESSION['id'] = $login->id;
                 $_SESSION['pseudo'] = $login->pseudo;
                 $_SESSION['connected'] = 1;
+                $_SESSION['role'] = $login->role;
                 ?>
                 <meta http-equiv="refresh" content="0.1;URL=/accueil">
                 <?php
