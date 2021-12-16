@@ -1,4 +1,4 @@
 <?php
-    $userList = new user();
+    $userList = new users();
     $userList = $userList->allPseudoUser();
 ?>
