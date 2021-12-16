@@ -44,7 +44,7 @@ if (isset($_SESSION['connected']) && isset($_SESSION['id']) && $_SESSION['connec
                 ?>
         <div class="col-4">
                 <p style="color:white;text-align: center"><?= $gc->name?></p>
-                <img style="display: block;margin: auto" src="assets/images/pokemon/<?= $gc->name?>.png" alt="">
+                <img style="display: block;margin: auto" src="assets/images/Cards/<?= $gc->name?>.png" alt="">
         </div>
                 <?php
             }?>
