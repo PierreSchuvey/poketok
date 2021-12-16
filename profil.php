@@ -5,7 +5,7 @@ include_once 'models/users.php';
 include_once 'models/capture.php';
 include_once 'models/cards.php';
 include_once 'controllers/profilController.php';
-include_once 'controllers/addCards.php';
+include_once 'controllers/addCard.php';
 if (isset($_SESSION['connected']) && isset($_SESSION['id']) && $_SESSION['connected'] == 1) {
   if($_SESSION['role'] == "Admin"){
   ?>
