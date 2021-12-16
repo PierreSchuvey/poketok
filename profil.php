@@ -9,7 +9,7 @@ if (isset($_SESSION['connected']) && isset($_SESSION['id']) && $_SESSION['connec
   ?>
     <form style="text-align:center;margin-top:20px" class="" action="/" method="post">
       <input type="file" name="giveCard" value="">
-      <input type="submit" name="" value="Valider">
+      <input type="submit" name="addCard" value="Valider">
     </form>
   <?php
   }
