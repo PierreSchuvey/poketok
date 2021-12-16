@@ -30,7 +30,7 @@ if (isset($_SESSION['connected']) && isset($_SESSION['id']) && $_SESSION['connec
                     <td><?=$l['player']?></td>
                     <td><?=$l['tiktok']?></td>
                     <td><?=$l['nbCapture']?></td>
-                    <td style="color:black"><a id="profilLeaderBoard" href="/Profil_<?=$l['id']?>">Profil</a></td>
+                    <td><a style="color:black" id="profilLeaderBoard" href="/Profil_<?=$l['id']?>">Profil</a></td>
                 </tr>
                 <?php
               }else{
