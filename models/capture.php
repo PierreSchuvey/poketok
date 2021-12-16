@@ -12,7 +12,7 @@ class capture extends dataBase {
     }
 
     public function getLeaderboard() {
-        $query = 'SELECT `users`.`id` AS `id`, `users`.`pseudo` AS `player`, `users`.`tiktok` AS `tiktok`, COUNT(`capture`.`id`) AS `nbCapture`,`users`.`id` AS `id` FROM `capture` INNER JOIN `users` ON `users`.`id`=`capture`.`id_user` WHERE id_user != 5 GROUP BY `capture`.`id_user` ORDER BY nbCapture DESC';
+        $query = 'SELECT `users`.`id` AS `id`, `users`.`pseudo` AS `player`, `users`.`tiktok` AS `tiktok`, COUNT(`capture`.`id`) AS `nbCapture`,`users`.`id` AS `id` FROM `capture` INNER JOIN `users` ON `users`.`id`=`capture`.`id_user` WHERE id_user != 5 AND id_user != 75 GROUP BY `capture`.`id_user` ORDER BY nbCapture DESC';
         $getLeaderboard = $this->db->query($query);
         if (is_object($getLeaderboard)) {
             $getLeaderboard = $getLeaderboard->fetchAll(PDO::FETCH_ASSOC);
