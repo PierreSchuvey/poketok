@@ -31,6 +31,16 @@ class cards extends dataBase {
         return $addCards->execute();
     }
 
+    public function getLastCard() {
+        $query = 'SELECT `id` FROM `cards` WHERE id=(SELECT max(id) FROM cards)';
+        $responseRequest = $this->db->query($query);
+        if (is_object($responseRequest)) {
+            $getLastCard = $responseRequest->fetch(PDO::FETCH_OBJ);
+        }
+        return $getLastCard;
+    }
+
+
     public function __destruct() {
 
     }

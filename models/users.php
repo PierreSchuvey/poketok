@@ -23,7 +23,7 @@ class users extends dataBase {
     }
 
     public function allPseudoUser() {
-        $query = 'SELECT `id`, `pseudo` FROM `users`';
+        $query = 'SELECT `id`, `pseudo`, `tiktok` FROM `users`';
         $responseRequest = $this->db->query($query);
         if (is_object($responseRequest)) {
             $pseudoList = $responseRequest->fetchAll(PDO::FETCH_ASSOC);

@@ -1,9 +1,8 @@
 <?php
 include_once 'vues/header.php';
 include_once 'models/dataBase.php';
-include_once 'models/pokemon.php';
+include_once 'models/cards.php';
 include_once 'models/capture.php';
-include_once 'controllers/capturePokemon.php';
 if (isset($_SESSION['connected']) && isset($_SESSION['id']) && $_SESSION['connected'] == 1) {
 ?>
     <div class="title">

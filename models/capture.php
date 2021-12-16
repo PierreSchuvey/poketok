@@ -37,6 +37,16 @@ class capture extends dataBase {
         return $getAllCaptured = $getAllCaptured->fetchAll(PDO::FETCH_OBJ);
     }
 
+    public function addCapture() {
+        //On prépare la requête sql qui insert dans les champs selectionnés, les valeurs sont des marqueurs nominatifs
+        $query = 'INSERT INTO `capture`(`id_cards`, `id_user`) VALUES(:idCards, :idUser)';
+        $addCards = $this->db->prepare($query);
+        $addCards->bindValue(':idCards', $this->idCards, PDO::PARAM_INT);
+        $addCards->bindValue(':idUser', $this->idUser, PDO::PARAM_INT);
+        //Si l'insertion s'est correctement déroulée on retourne vrai
+        return $addCards->execute();
+    }
+
 
     public function __destruct() {
 
