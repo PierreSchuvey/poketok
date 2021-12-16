@@ -1,7 +1,7 @@
 <?php
 include_once 'vues/header.php';
 include_once 'models/dataBase.php';
-include_once 'models/user.php';
+include_once 'models/users.php';
 include_once 'controllers/userListController.php';
 if (isset($_SESSION['connected']) && isset($_SESSION['id']) && $_SESSION['connected'] == 1 && $_SESSION['role'] == "Admin") {
     ?>
