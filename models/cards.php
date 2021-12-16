@@ -3,7 +3,7 @@
 class cards extends dataBase {
 
     public $id = 0;
-    public $path = '';
+    public $pathName = '';
     public $name = '';
     public $number = 0;
 
@@ -22,9 +22,9 @@ class cards extends dataBase {
 
     public function addCards() {
         //On prépare la requête sql qui insert dans les champs selectionnés, les valeurs sont des marqueurs nominatifs
-        $query = 'INSERT INTO `cards`(`path`) VALUES(:path)';
+        $query = 'INSERT INTO `cards`(`path`) VALUES(:pathName)';
         $addCards = $this->db->prepare($query);
-        $addCards->bindValue(':path', $this->path, PDO::PARAM_STR);
+        $addCards->bindValue(':pathName', $this->path, PDO::PARAM_STR);
         //Si l'insertion s'est correctement déroulée on retourne vrai
         return $addCards->execute();
     }

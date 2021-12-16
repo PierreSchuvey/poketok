@@ -6,7 +6,7 @@
               $uploaddir = '/assets/images/Cards/';
               $uploadfile = $uploaddir . basename($_FILES['userfile']['name']);
               if(move_uploaded_file($_FILES['userfile']['tmp_name'], $uploadfile)){
-                $cards->path = $_FILES['giveCard']['name'];
+                $cards->pathName = $_FILES['giveCard']['name'];
                 $cards->addCards();
               }
               ?>
