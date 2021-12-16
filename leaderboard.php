@@ -23,8 +23,9 @@ if (isset($_SESSION['connected']) && isset($_SESSION['id']) && $_SESSION['connec
             <?php
             $classement = 1;
             foreach($leaderboard as $l){
+              if($l['id'] == $_SESSION['id']){
                 ?>
-                <tr>
+                <tr style="background-color:orange">
                     <td><?=$classement?></td>
                     <td><?=$l['player']?></td>
                     <td><?=$l['tiktok']?></td>
@@ -32,6 +33,7 @@ if (isset($_SESSION['connected']) && isset($_SESSION['id']) && $_SESSION['connec
                     <td><a id="profilLeaderBoard" href="/Profil_<?=$l['id']?>">Profil</a></td>
                 </tr>
                 <?php
+                }
                 $classement ++;
             }
             ?>
