@@ -23,7 +23,7 @@
             <li class="nav-item"><a style="margin-left: 10px;" class="nav-link" href="/classement">LeaderBoard</a></li>
             <li class="nav-item"><a style="margin-left: 10px;" class="nav-link" href="/controllers/logout.php">Déconnexion</a></li>
             <?php
-            if($userInfos->role == "Admin")
+            if($userInfos->role == "Admin"){
             ?>
               <li class="nav-item"><a style="margin-left: 10px;" class="nav-link" href="/utilisateurs">Utilisateurs</a></li>
             <?php
