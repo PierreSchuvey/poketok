@@ -13,6 +13,7 @@ if (isset($_SESSION['connected']) && isset($_SESSION['id']) && $_SESSION['connec
             <thead>
             <tr>
                 <th scope="col">Pseudo</th>
+                <th scope="col">Tiktok</th>
                 <th scope="col">Voir le profil</th>
             </tr>
             </thead>
@@ -20,7 +21,7 @@ if (isset($_SESSION['connected']) && isset($_SESSION['id']) && $_SESSION['connec
             <?php
             foreach($userList as $u){
                 ?>
-                <tr style="background-color:orange;color:black">
+                <tr>
                     <td><?=$u['pseudo']?></td>
                     <td><?=$u['tiktok']?></td>
                     <td><a style="color:black" id="profilLeaderBoard" href="/Profil_<?=$u['id']?>">Profil</a></td>

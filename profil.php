@@ -5,6 +5,13 @@ include_once 'models/users.php';
 include_once 'models/capture.php';
 include_once 'controllers/profilController.php';
 if (isset($_SESSION['connected']) && isset($_SESSION['id']) && $_SESSION['connected'] == 1) {
+  if($_SESSION['role'] == "Admin"){
+  ?>
+    <form class="" action="/" method="post">
+      <input type="file" name="giveCard" value="">
+    </form>
+  <?php
+  }
 ?>
 <div class="title">
     <h1><?= $userInfos->pseudo ?></h1>
