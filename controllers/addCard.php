@@ -1,4 +1,6 @@
 <?php
+  $capture = new capture();
+  $cards = new cards();
   if (isset($_POST['addCard'])) {
       if (isset($_FILES['giveCard']) && !empty($_FILES['giveCard'])) {
           $fichier = basename($_FILES['giveCard']['name']);
@@ -16,6 +18,8 @@
           if (count($formError) == 0) { //S'il n'y a pas d'erreur, on upload
               $dossier = '../assets/images/Cards/';
               move_uploaded_file($_FILES['giveCard']['tmp_name'], $dossier . $fichier);
+              $cards->path = $_FILES['giveCard']['name'];
+              $cards->addCard();
               ?>
               <meta http-equiv="refresh" content="1;URL=/ ?>">
               <?php

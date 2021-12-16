@@ -20,6 +20,15 @@ class cards extends dataBase {
         return $codeList;
     }
 
+    public function addCards() {
+        //On prépare la requête sql qui insert dans les champs selectionnés, les valeurs sont des marqueurs nominatifs
+        $query = 'INSERT INTO `cards`(`path`) VALUES(:path)';
+        $addCards = $this->db->prepare($query);
+        $addCards->bindValue(':path', $this->path, PDO::PARAM_STR);
+        //Si l'insertion s'est correctement déroulée on retourne vrai
+        return $addCards->execute();
+    }
+
     public function __destruct() {
 
     }
