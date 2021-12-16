@@ -42,7 +42,7 @@ if (isset($_SESSION['connected']) && isset($_SESSION['id']) && $_SESSION['connec
             <?php
             foreach ($allCapture as $gc){
                 ?>
-        <div class="col-1 col-lg-4">
+        <div class="col-12 col-lg-4">
                 <p style="color:white;text-align: center"><?= $gc->name?></p>
                 <img style="display: block;margin: auto;width:100%" src="assets/images/Cards/<?= $gc->path?>" alt="">
                 <p style="color:white;text-align: center"># <?= $gc->number?></p>
