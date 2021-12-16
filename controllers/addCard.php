@@ -17,7 +17,7 @@
     $capture->idCards = $lastId->id;
     $capture->addCapture();
   ?>
-  <meta http-equiv="refresh" content="3;URL=/profil_<?= $_POST['userId'] ?>">
+  <meta http-equiv="refresh" content="3;URL=/Profil_<?= $_POST['userId'] ?>">
   <?php
   }
 ?>

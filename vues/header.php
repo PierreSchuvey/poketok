@@ -19,7 +19,7 @@
     <div class="navbar-collapse collapse" id="navbar">
         <ul class="navbar-nav">
             <li class="nav-item"><a style="margin-left: 10px;" class="nav-link" href="/accueil">Accueil</a></li>
-            <li class="nav-item"><a style="margin-left: 10px;" class="nav-link" href="/Profil_<?=$_SESSION['id']?>">Profil</a></li>
+            <li class="nav-item"><a style="margin-left: 10px;" class="nav-link" href="/Profil_<?=$_SESSION['id']?>">Mes cartes</a></li>
             <li class="nav-item"><a style="margin-left: 10px;" class="nav-link" href="/classement">LeaderBoard</a></li>
             <li class="nav-item"><a style="margin-left: 10px;" class="nav-link" href="/controllers/logout.php">Déconnexion</a></li>
             <?php
