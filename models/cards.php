@@ -25,6 +25,8 @@ class cards extends dataBase {
         $query = 'INSERT INTO `cards`(`path`, `name`, `number`) VALUES(:pathName, :name, :nb)';
         $addCards = $this->db->prepare($query);
         $addCards->bindValue(':pathName', $this->pathName, PDO::PARAM_STR);
+        $addCards->bindValue(':pathName', $this->name, PDO::PARAM_STR);
+        $addCards->bindValue(':pathName', $this->nb, PDO::PARAM_INT);
         //Si l'insertion s'est correctement déroulée on retourne vrai
         return $addCards->execute();
     }

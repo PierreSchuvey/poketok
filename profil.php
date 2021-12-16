@@ -10,7 +10,9 @@ if (isset($_SESSION['connected']) && isset($_SESSION['id']) && $_SESSION['connec
   if($_SESSION['role'] == "Admin"){
   ?>
     <form enctype="multipart/form-data" style="text-align:center;margin-top:20px" class="" action="/controllers/addCard.php" method="post">
-      <input type="file" name="giveCard" value="">
+      <input type="text" name="cardPath" value="">
+      <input type="text" name="cardName" value="">
+      <input type="text" name="cardNumber" value="">
       <input type="submit" name="addCard" value="Valider">
     </form>
   <?php
