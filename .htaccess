@@ -10,6 +10,7 @@
     #([0-9]+) = page=$2
 RewriteRule accueil /home.php [L]
 RewriteRule inscription /subscribeForm.php [L]
+RewriteRule utilisateurs /userList.php [L]
 RewriteRule Profil_([0-9]+) /profil.php?idUser=$1 [L]
 RewriteRule classement /leaderboard.php [L]
 </IfModule>
