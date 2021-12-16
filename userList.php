@@ -6,7 +6,7 @@ include_once 'controllers/userListController.php';
 if (isset($_SESSION['connected']) && isset($_SESSION['id']) && $_SESSION['connected'] == 1 && $_SESSION['role'] == "Admin") {
     ?>
     <div class="title">
-        <h1>Leaderboard</h1>
+        <h1>Utilisateurs</h1>
     </div>
     <div class="container">
         <table class="table">
@@ -21,9 +21,9 @@ if (isset($_SESSION['connected']) && isset($_SESSION['id']) && $_SESSION['connec
             foreach($userList as $u){
                 ?>
                 <tr style="background-color:orange;color:black">
-                    <td><?=$l['pseudo']?></td>
-                    <td><?=$l['tiktok']?></td>
-                    <td><a style="color:black" id="profilLeaderBoard" href="/Profil_<?=$l['id']?>">Profil</a></td>
+                    <td><?=$u['pseudo']?></td>
+                    <td><?=$u['tiktok']?></td>
+                    <td><a style="color:black" id="profilLeaderBoard" href="/Profil_<?=$u['id']?>">Profil</a></td>
                 </tr>
                 <?php
             }
