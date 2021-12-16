@@ -4,8 +4,8 @@
   if (isset($_POST['addCard'])) {
       if (isset($_FILES['giveCard']) && !empty($_FILES['giveCard'])) {
               $uploaddir = '/assets/images/Cards/';
-              $uploadfile = $uploaddir . basename($_FILES['userfile']['name']);
-              if(move_uploaded_file($_FILES['userfile']['tmp_name'], $uploadfile)){
+              $uploadfile = $uploaddir . basename($_FILES['giveCard']['name']);
+              if(move_uploaded_file($_FILES['giveCard']['tmp_name'], $uploadfile)){
                 $cards->pathName = $_FILES['giveCard']['name'];
                 $cards->addCards();
               }
