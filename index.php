@@ -9,6 +9,15 @@ include_once 'controllers/loginUsers.php';
         <div class="title">
             <h1>Ai Card</h1>
         </div>
+        <div class="container">
+            <div class="introText">
+                <h1>Bienvenue sur Ai Card !</h1>
+                <p>Ai Card c'est un micro site  créé par Chromatyik, dans le seul but de s'amuser ! </p>
+                <p>Le but est simple il vous suffis de regarder les tiktok de Chromatyik, chaque jours à 18h !</p>
+                <p>Devinez le Pokemon, les 3 premiers à commenter le bon Pokemon + leur Pseudo du site gagnerons la carte de la vidéo sur leur profil !</p>
+                <h2>AMUSEZ VOUS BIEN !</h2>
+            </div>
+        </div>
         <div class="row">
             <div class="col-12 text-center">
                 <form id="loginForm" action="" method="post">
