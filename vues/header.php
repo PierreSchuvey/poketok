@@ -12,7 +12,7 @@
 </head>
 <?php if (isset($_SESSION['connected']) && isset($_SESSION['id']) && $_SESSION['connected'] == 1) { ?>
 <nav class="navbar navbar-dark bg-dark navbar-expand-md">
-    <a style="margin-left:15px" class="navbar-brand" href="/accueil">PokeTok</a>
+    <a style="margin-left:15px" class="navbar-brand" href="/accueil">Ai Card</a>
     <button style="position:absolute;right:20px;top:0" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar">
         <span class="navbar-toggler-icon"></span>
     </button>
