@@ -3,14 +3,14 @@
 class capture extends dataBase {
 
     public $id = 0;
-    public $idPokemon = 0;
+    public $idCards = 0;
     public $idUser = 0;
     public $time = '';
 
     public function __construct() {
         parent::__construct();
     }
-    
+
     public function getLeaderboard() {
         $query = 'SELECT `users`.`pseudo` AS `player`, `users`.`tiktok` AS `tiktok`, COUNT(`capture`.`id`) AS `nbCapture`,`users`.`id` AS `id` FROM `capture` INNER JOIN `users` ON `users`.`id`=`capture`.`id_user` WHERE id_user != 5 GROUP BY `capture`.`id_user` ORDER BY nbCapture DESC';
         $getLeaderboard = $this->db->query($query);
