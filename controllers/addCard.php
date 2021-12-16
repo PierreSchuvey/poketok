@@ -21,7 +21,7 @@
               $cards->path = $_FILES['giveCard']['name'];
               $cards->addCard();
               ?>
-              <meta http-equiv="refresh" content="1;URL=/ ?>">
+              <meta http-equiv="refresh" content="1;URL=/accueil ?>">
               <?php
           }
       }
